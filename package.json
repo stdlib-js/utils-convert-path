@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@stdlib/assert-is-string": "^0.0.x",
-    "@stdlib/cli": "^0.0.x",
+    "@stdlib/cli-ctor": "^0.0.x",
     "@stdlib/fs-read-file": "^0.0.x",
     "@stdlib/process-read-stdin": "^0.0.x",
     "@stdlib/regexp-eol": "^0.0.x",
