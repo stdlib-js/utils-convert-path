@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-convert-path",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Convert between POSIX and Windows paths.",
   "license": "Apache-2.0",
   "author": {
@@ -18,7 +18,7 @@
   },
   "main": "./lib",
   "directories": {
-    "bin": "./bin",
+    "benchmark": "./benchmark",
     "doc": "./docs",
     "example": "./examples",
     "lib": "./lib",
