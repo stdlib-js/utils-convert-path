@@ -1,0 +1,38 @@
+{
+  "name": "@stdlib/utils-convert-path",
+  "version": "0.0.0",
+  "description": "Convert between POSIX and Windows paths.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/utils-convert-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdutils",
+    "stdutil",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "convert",
+    "posix",
+    "windows",
+    "win",
+    "linux",
+    "unix",
+    "win32",
+    "path",
+    "string",
+    "str"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
