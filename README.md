@@ -213,16 +213,16 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/utils-convert-path-cli.svg
 [npm-url]: https://npmjs.org/package/@stdlib/utils-convert-path-cli
 
-[test-image]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml/badge.svg?branch=v0.1.1
-[test-url]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml?query=branch:v0.1.1
+[test-image]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/actions/workflows/test.yml/badge.svg?branch=v0.1.1
+[test-url]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/actions/workflows/test.yml?query=branch:v0.1.1
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-convert-path/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/utils-convert-path?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-convert-path@v0.1.1/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/utils-convert-path@v0.1.1?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/utils-convert-path.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/utils-convert-path/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/utils-convert-path@v0.1.1.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/utils-convert-path@v0.1.1/main
 
 -->
 
@@ -233,19 +233,19 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
-[cli-section]: https://github.com/stdlib-js/utils-convert-path#cli
-[cli-url]: https://github.com/stdlib-js/utils-convert-path/tree/cli
-[@stdlib/utils-convert-path]: https://github.com/stdlib-js/utils-convert-path/tree/main
+[cli-section]: https://github.com/stdlib-js/utils-convert-path@v0.1.1#cli
+[cli-url]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/tree/cli
+[@stdlib/utils-convert-path]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/utils-convert-path/tree/deno
-[umd-url]: https://github.com/stdlib-js/utils-convert-path/tree/umd
-[esm-url]: https://github.com/stdlib-js/utils-convert-path/tree/esm
-[branches-url]: https://github.com/stdlib-js/utils-convert-path/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/tree/deno
+[umd-url]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/tree/umd
+[esm-url]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/tree/esm
+[branches-url]: https://github.com/stdlib-js/utils-convert-path@v0.1.1/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-convert-path/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-convert-path@v0.1.1/main/LICENSE
 
 [extended-length-path]: https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx
 
