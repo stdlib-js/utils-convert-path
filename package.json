@@ -54,10 +54,10 @@
     "@stdlib/utils-regexp-from-string": "^0.1.1"
   },
   "devDependencies": {
-    "@stdlib/assert-is-browser": "^0.1.0",
-    "@stdlib/assert-is-windows": "^0.1.0",
+    "@stdlib/assert-is-browser": "^0.1.1",
+    "@stdlib/assert-is-windows": "^0.1.1",
     "@stdlib/bench": "^0.1.0",
-    "@stdlib/process-exec-path": "^0.1.0",
+    "@stdlib/process-exec-path": "^0.1.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "proxyquire": "^2.0.0",
     "istanbul": "^0.4.1",
