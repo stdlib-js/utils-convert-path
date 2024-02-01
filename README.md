@@ -45,25 +45,118 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/utils-convert-path
+```
 
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var convertPath = require( '@stdlib/utils-convert-path' );
+```
+
+#### convertPath( from, to )
+
+Converts between POSIX and Windows paths.
+
+```javascript
+var p = convertPath( 'C:\\foo\\bar', 'posix' );
+// returns '/c/foo/bar'
+```
+
+The following output path conventions are supported:
+
+-   **win32**: Windows path convention; e.g., `C:\\foo\\bar`.
+-   **mixed**: mixed path convention (Windows volume convention and POSIX path separator); e.g., `C:/foo/bar`.
+-   **posix**: POSIX path convention; e.g., `/c/foo/bar`.
+
+</section>
+
+<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
+<section class="notes">
 
+## Notes
+
+-   A Windows [extended-length path][extended-length-path] **cannot** be converted to either a `mixed` or `posix` path convention, as forward slashes cannot be used as path separators.
+-   If a POSIX path begins with `/[A-Za-z]/` (e.g., `/c/`), the path is assumed to begin with a volume name.
+-   The function makes no attempt to verify that a provided path is valid. 
+
+</section>
+
+<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
+<section class="examples">
 
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var convertPath = require( '@stdlib/utils-convert-path' );
+
+var p1;
+var p2;
+
+p1 = '/c/foo/bar/beep.c';
+p2 = convertPath( p1, 'win32' );
+// returns 'c:\foo\bar\beep.c'
+
+p1 = '/c/foo/bar/beep.c';
+p2 = convertPath( p1, 'mixed' );
+// returns 'c:/foo/bar/beep.c'
+
+p1 = '/c/foo/bar/beep.c';
+p2 = convertPath( p1, 'posix' );
+// returns '/c/foo/bar/beep.c'
+
+p1 = 'C:\\\\foo\\bar\\beep.c';
+p2 = convertPath( p1, 'win32' );
+// returns 'C:\\foo\bar\beep.c'
+
+p1 = 'C:\\\\foo\\bar\\beep.c';
+p2 = convertPath( p1, 'mixed' );
+// returns 'C:/foo/bar/beep.c'
+
+p1 = 'C:\\\\foo\\bar\\beep.c';
+p2 = convertPath( p1, 'posix' );
+// returns '/c/foo/bar/beep.c'
+```
+
+</section>
+
+<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -81,7 +174,7 @@ npm install -g @stdlib/utils-convert-path-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: convert-path [options] [<path>] --out=<output>
@@ -102,7 +195,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -123,7 +216,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ convert-path /c/foo/bar --out=mixed
@@ -165,11 +258,6 @@ c:\foo\bar
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/utils-convert-path`][@stdlib/utils-convert-path]</span><span class="delimiter">: </span><span class="description">convert between POSIX and Windows paths.</span>
-
-
 </section>
 
 <!-- /.related -->
@@ -187,7 +275,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -210,8 +298,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/utils-convert-path-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/utils-convert-path-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/utils-convert-path.svg
+[npm-url]: https://npmjs.org/package/@stdlib/utils-convert-path
 
 [test-image]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml?query=branch:main
@@ -241,8 +329,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/utils-convert-path/tree/deno
+[deno-readme]: https://github.com/stdlib-js/utils-convert-path/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/utils-convert-path/tree/umd
+[umd-readme]: https://github.com/stdlib-js/utils-convert-path/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/utils-convert-path/tree/esm
+[esm-readme]: https://github.com/stdlib-js/utils-convert-path/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/utils-convert-path/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-convert-path/main/LICENSE
