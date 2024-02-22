@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@deno/mod.js';
+import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.1-deno/mod.js';
 ```
 
 #### convertPath( from, to )
@@ -97,7 +97,7 @@ The following output path conventions are supported:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@deno/mod.js';
+import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.1-deno/mod.js';
 
 var p1;
 var p2;
