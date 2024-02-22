@@ -3,34 +3,8 @@
   "version": "0.2.1",
   "description": "Convert between POSIX and Windows paths.",
   "license": "Apache-2.0",
-  "author": {
-    "name": "The Stdlib Authors",
-    "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
-  },
-  "contributors": [
-    {
-      "name": "The Stdlib Authors",
-      "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
-    }
-  ],
-  "bin": {
-    "convert-path": "./bin/cli"
-  },
-  "main": "./lib",
-  "directories": {
-    "benchmark": "./benchmark",
-    "doc": "./docs",
-    "example": "./examples",
-    "lib": "./lib",
-    "test": "./test"
-  },
-  "types": "./docs/types",
-  "scripts": {
-    "test": "make test",
-    "test-cov": "make test-cov",
-    "examples": "make examples",
-    "benchmark": "make benchmark"
-  },
+  "type": "module",
+  "main": "./index.mjs",
   "homepage": "https://stdlib.io",
   "repository": {
     "type": "git",
@@ -39,45 +13,6 @@
   "bugs": {
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
-  "dependencies": {
-    "@stdlib/assert-is-regexp-string": "^0.2.1",
-    "@stdlib/assert-is-string": "^0.2.1",
-    "@stdlib/cli-ctor": "^0.2.1",
-    "@stdlib/fs-read-file": "^0.2.1",
-    "@stdlib/process-read-stdin": "^0.2.1",
-    "@stdlib/regexp-eol": "^0.2.1",
-    "@stdlib/regexp-extended-length-path": "^0.2.1",
-    "@stdlib/streams-node-stdin": "^0.2.1",
-    "@stdlib/string-base-lowercase": "^0.3.1",
-    "@stdlib/error-tools-fmtprodmsg": "^0.2.1",
-    "@stdlib/string-replace": "^0.2.1",
-    "@stdlib/utils-regexp-from-string": "^0.2.1"
-  },
-  "devDependencies": {
-    "@stdlib/assert-is-browser": "^0.2.0",
-    "@stdlib/assert-is-windows": "^0.2.1",
-    "@stdlib/process-exec-path": "^0.2.0",
-    "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
-    "proxyquire": "^2.0.0",
-    "istanbul": "^0.4.1",
-    "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
-    "@stdlib/bench-harness": "^0.2.0"
-  },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">2.7.0"
-  },
-  "os": [
-    "aix",
-    "darwin",
-    "freebsd",
-    "linux",
-    "macos",
-    "openbsd",
-    "sunos",
-    "win32",
-    "windows"
-  ],
   "keywords": [
     "stdlib",
     "stdutils",
