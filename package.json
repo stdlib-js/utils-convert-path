@@ -49,7 +49,7 @@
     "@stdlib/regexp-extended-length-path": "^0.2.1",
     "@stdlib/streams-node-stdin": "^0.2.1",
     "@stdlib/string-base-lowercase": "^0.3.1",
-    "@stdlib/string-format": "^0.2.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.1",
     "@stdlib/string-replace": "^0.2.1",
     "@stdlib/utils-regexp-from-string": "^0.2.1"
   },
