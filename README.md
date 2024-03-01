@@ -45,19 +45,33 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-convert-path
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-convert-path/tags). For example,
-
-```javascript
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.1-esm/index.mjs';
+var convertPath = require( '@stdlib/utils-convert-path' );
 ```
 
 #### convertPath( from, to )
@@ -101,13 +115,8 @@ The following output path conventions are supported:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@esm/index.mjs';
+```javascript
+var convertPath = require( '@stdlib/utils-convert-path' );
 
 var p1;
 var p2;
@@ -135,10 +144,6 @@ p2 = convertPath( p1, 'mixed' );
 p1 = 'C:\\\\foo\\bar\\beep.c';
 p2 = convertPath( p1, 'posix' );
 // returns '/c/foo/bar/beep.c'
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -147,7 +152,99 @@ p2 = convertPath( p1, 'posix' );
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/utils-convert-path-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: convert-path [options] [<path>] --out=<output>
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+  -o,    --out output          Output path convention.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'c:/foo/bar\n./docs/eslint' | convert-path --out=posix --split /\r?\n/
+    # Escaped...
+    $ echo -n $'c:/foo/bar\n./docs/eslint' | convert-path --out=posix --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ convert-path /c/foo/bar --out=mixed
+c:/foo/bar
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n '/c/foo/bar' | convert-path --out=win32
+c:\foo\bar
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n 'c:/foo/bar\t./docs/eslint' | convert-path  --out=win32 --split '\t'
+c:\foo\bar
+.\docs\eslint
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -174,7 +271,7 @@ p2 = convertPath( p1, 'posix' );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -204,8 +301,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/utils-convert-path.svg
 [npm-url]: https://npmjs.org/package/@stdlib/utils-convert-path
 
-[test-image]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml/badge.svg?branch=v0.2.1
-[test-url]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml?query=branch:v0.2.1
+[test-image]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/utils-convert-path/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/utils-convert-path/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/utils-convert-path?branch=main
