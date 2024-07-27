@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@esm/index.mjs';
+import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.2-esm/index.mjs';
 ```
 
 #### convertPath( from, to )
@@ -102,7 +102,7 @@ The following output path conventions are supported:
 <body>
 <script type="module">
 
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@esm/index.mjs';
+import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.2-esm/index.mjs';
 
 var p1;
 var p2;
