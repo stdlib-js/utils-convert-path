@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-convert-path/tags). For example,
+
+```javascript
 import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.3-esm/index.mjs';
 ```
 
@@ -102,7 +107,7 @@ The following output path conventions are supported:
 <body>
 <script type="module">
 
-import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@v0.2.3-esm/index.mjs';
+import convertPath from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-convert-path@esm/index.mjs';
 
 var p1;
 var p2;
